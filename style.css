@@ -1,22 +1,51 @@
-.card{
-   width: 400px;
-   height: 650px;
-   background-color: burlywood;
-   border-radius: 60px;
+.cards-container {
+    display: flex;
+    justify-content: center;  /* выравнивание по центру */
+    align-items: flex-start;   /* выравнивание элементов по верхнему краю */
+    flex-wrap: wrap;           /* перенос элементов на новую строку при нехватке места */
+    gap: 20px;                 /* расстояние между карточками */
 }
 
-.photo {
-   height: 40%;
-   padding: 40px;
+
+
+.card {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: Peru;
+  }
+
+
+.card img {
+    width: 100%;               /* ширина изображения, чтобы оно занимало всю ширину карточки */
+    height: auto;              /* автоматическая высота изображения */
+}
+.card img:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб изображения при наведении */
+  }
+
+h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+.card-info {
+    padding: 10px;          /* внутренний отступ для текстовой информации */
 }
 
-.info {
-   padding: 40px;
-   height: 40%;
-}
+card-info h2 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
 
-img {
-   position: relative;
-   left: 17%;
-   border-radius: 20px;
-}
+.card-info p {
+    margin: 5px 0;
+  }
